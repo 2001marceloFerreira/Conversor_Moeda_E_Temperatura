@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundotemp"
+    tools:context=".Temperatura">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="320dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="38dp"
+        android:text="Digite a temperatura em CELSIUS"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="146dp"
+        android:onClick="Convert"
+        android:text="Converter"
+        app:backgroundTint="#373333"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <EditText
+        android:id="@+id/et_tempC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="Digite em ºC"
+        android:inputType="number"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="278dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="53dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_tempC">
+
+        <TextView
+            android:id="@+id/txtFah"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="Temperatura Fahrenheit = "
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtKel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Temperatura em Kelvin ="
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="146dp"
+        android:text="Voltar"
+        app:backgroundTint="#3C3A3A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_convert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
